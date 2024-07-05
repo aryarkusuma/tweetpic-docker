@@ -10,4 +10,5 @@ RUN apt-get update; apt install dumb-init -y
 ENTRYPOINT ["dumb-init", "--"]
 COPY --from=build /go/src/app/docker-scraper /tmp
 RUN mkdir -p /tmp/images
+EXPOSE 8080
 CMD ["/tmp/docker-scraper"]
