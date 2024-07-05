@@ -120,7 +120,7 @@ func TweetCheck(tweetId string) (int, error) {
 
 func TweetPicWorker(tweetId string, imgName string) {
         //Get running chrome dev remote address
-        u := launcher.MustResolveURL("chrome:9222")
+        u := launcher.MustResolveURL("")
 
         //open,load and rendering a page of the embeded api
         page := rod.New().ControlURL(u).MustConnect().MustPage("https://platform.twitter.com/embed/Tweet.html?id=" + tweetId).MustSetViewport(1920, 2000, 1, false)
