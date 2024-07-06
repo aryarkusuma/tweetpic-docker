@@ -6,8 +6,8 @@ TweetPic allows you to capture and serve images of a tweet.
 
   
 Manual build: 
-- docker build -t <your-desired-image-name:tag> .
-- docker run --rm -p 8080:8080 <your-desired-image-name:tag>
+1. docker build -t </your-desired-image-name:tag/> .
+2. docker run --rm -p 8080:8080 </your-desired-image-name:tag/>
 
 Run image from my docker.io registry:
 - docker run --rm -p 8080:8080 aryarkusuma/tweetpic:chromeheadless
