@@ -83,7 +83,7 @@ func serveImage(c *fiber.Ctx) error {
                 return fiber.NewError(fiber.StatusBadRequest, "Image name not specified.")
         }
         // Path to the image file in the tweetpic/images directory
-        imagePath := "./images" + filepath.Clean("/" + imageName)
+        imagePath := "/project/images" + filepath.Clean("/" + imageName)
 
         return c.SendFile(imagePath)
 }
@@ -148,7 +148,7 @@ func TweetPicWorker(tweetId string, imgName string) {
                 log.Fatalf("Failed to screenshot: %v", err)
         }
 
-        filepath := "./images/" + imgName
+        filepath := "/project/images/" + imgName
         err = os.WriteFile(filepath, ss, 0644)
         if err != nil {
                 log.Fatalf("Failed to save screenshot: %v", err)
