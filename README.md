@@ -5,8 +5,9 @@ TweetPic allows you to capture and serve images of a tweet.
 - [Notion Tweetpic](https://maze-marlin-a5b.notion.site/Tweet-X-Screenshoter-96fceedd92b1479a81649f0d4f1a7ee8)
 
   
-How to :
-docker run --rm -p 8080:8080 aryarkusuma/tweetpic:chromeheadless
+How to run :
+
+- docker run --rm -p 8080:8080 aryarkusuma/tweetpic:chromeheadless
 
 ## Endpoints
 ### 1. Get Tweet Picture
