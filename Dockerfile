@@ -1,4 +1,15 @@
-FROM debian:stable-slim as builder
+  GNU nano 5.4                                                                                                                                                                                   gchrome.dockerfile                                                                                                                                                                                             FROM debian:bookworm-slim as builder
+RUN apt-get update && apt-get install -y \
+        apt-transport-https \
+        ca-certificates \
+        golang
+
+COPY ./main.go /project/main.go
+WORKDIR /project
+RUN go mod init docker-scraper; go mod tidy
+RUN CGO_ENABLED=0 GOOS=linux go build
+
+FROM debian:stable-slim
 # FROM ubuntu:xenial
 # FROM google/debian:jessie
 
@@ -15,7 +26,6 @@ RUN apt-get update && apt-get install -y \
         && apt-get update && apt-get install -y \
         google-chrome-stable \
         fontconfig \
-        golang \
         fonts-ipafont-gothic \
         fonts-wqy-zenhei \
         fonts-thai-tlwg \
@@ -34,13 +44,10 @@ RUN useradd headless --shell /bin/bash --create-home \
 
 RUN mkdir /data && chown -R headless:headless /data
 
-COPY ./main.go /project/main.go
-WORKDIR /project
-RUN go mod init docker-scraper; go mod tidy
-RUN go build
-RUN apt-get remove -qqy golang
+COPY --from=builder /project/docker-scraper  /project/docker-scraper
 WORKDIR /
-RUN mkdir -p ./images
+RUN mkdir -p /project/images
 COPY run.sh /project/run.sh
 
 ENTRYPOINT ["/project/run.sh"]
+
