@@ -14,5 +14,4 @@
 # Run the dockerscraper application
 /project/docker-scraper
 
-# Wait for both processes to finish
-wait
+
