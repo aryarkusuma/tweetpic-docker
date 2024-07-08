@@ -21,7 +21,7 @@ Retrieves a picture of a specified tweet.
 - **Method:** GET
 - **Query Parameters:**
   - `id` (required): The ID of the tweet to capture
-
+  - ex: 'https://tweetpic.taila9d411.ts.net/tweetpic?id=1777812053459091699'
 #### Responses
 
 - **200 OK**
