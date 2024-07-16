@@ -1,4 +1,4 @@
-  GNU nano 5.4                                                                                                                                                                                   gchrome.dockerfile                                                                                                                                                                                             FROM debian:bookworm-slim as builder
+                                                                                                                                                                                 gchrome.dockerfile                                                                                                                                                                                             FROM debian:bookworm-slim as builder
 RUN apt-get update && apt-get install -y \
         apt-transport-https \
         ca-certificates \
