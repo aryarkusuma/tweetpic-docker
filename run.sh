@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Start Chrome in the background
+# Start Chrome
 /usr/bin/google-chrome \
     --no-sandbox \
     --disable-gpu \
@@ -11,7 +11,7 @@
     --user-data-dir=/data &
 
 
-# Run the dockerscraper application
+# Run the compiled go binary application
 /project/docker-scraper
 
 
