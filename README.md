@@ -1,7 +1,7 @@
 # TweetPic 
 
 TweetPic allows you to capture and serve images of a tweet. 
-- [Tweetpic](https://tweetpic.taila9d411.ts.net/) ( status down, Tunneled REST server, kalo mau nyoba2 endpoint)
+- [Tweetpic](https://tweetpic.taila9d411.ts.net/) ( Tailscaled Tunneled REST server, kalo mau nyoba2 endpoint)
 - [Notion Tweetpic](https://maze-marlin-a5b.notion.site/Tweet-X-Screenshoter-96fceedd92b1479a81649f0d4f1a7ee8)
 
   
