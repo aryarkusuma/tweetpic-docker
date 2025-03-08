@@ -1,15 +1,11 @@
 # TweetPic 
 
 TweetPic allows you to capture and serve images of a tweet. 
-- [Tweetpic](https://tweetpic.taila9d411.ts.net/) ( Tailscaled Tunneled REST server, kalo mau nyoba2 endpoint)
-- [Notion Tweetpic](https://maze-marlin-a5b.notion.site/Tweet-X-Screenshoter-96fceedd92b1479a81649f0d4f1a7ee8)
-
-  
 Manual build: 
 1. docker build -t </your-desired-image-name:tag/> .
 2. docker run --rm -p 8080:8080 </your-desired-image-name:tag/>
 
-Run image from my docker.io registry:
+or pull the image from my docker.io registry:
 - docker run --rm -p 8080:8080 aryarkusuma/tweetpic:chromeheadless
 
 ## Endpoints
